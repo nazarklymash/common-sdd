@@ -1,0 +1,14 @@
+---
+description: SDD pipeline conductor — always defer to PIPELINE.md for roles and file ownership
+alwaysApply: true
+---
+
+# SDD PIPELINE
+
+This repo uses Spec-Driven Development with leveled agents. Before generating architecture, specs, code, tests, or reviews:
+
+1. Read `PIPELINE.md` (naming, ownership, gates, reject loop max 3).
+2. Use the matching system prompt under `prompts/` for the requested level.
+3. Write only files that level is allowed to own.
+4. Shared types live in `specs/contracts/`; task specs reference them.
+5. Do not mix L3 Coder and Reviewer/Tester personas in one unstructured pass — sequence them per the pipeline.

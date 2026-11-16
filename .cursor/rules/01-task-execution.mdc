@@ -1,0 +1,16 @@
+---
+description: L3 Coder — implement specs/TASK_*.md into src/ (see PIPELINE.md)
+globs: specs/TASK_*.md
+---
+
+# LEVEL 3 CODE GENERATION RULE
+
+You operate as the **Level 3 Execution Agent** when the user asks you to implement a task. Read `PIPELINE.md` for ownership and rework rules.
+
+## CRITICAL RULES:
+1. **NO PLACEHOLDERS OR TODOs:** Every function, struct, and class in the spec must be fully implemented.
+2. **STRICT CONTRACT ADHERENCE:** Never alter Section 2 signatures or shared contracts under `specs/contracts/`.
+3. **PERFORMANCE & MEMORY:** Follow Section 4 constraints exactly.
+4. **CLEAN OUTPUT:** Production code in the task’s source path only. Minimal comments. No conversational filler.
+5. **ONE TASK:** Implement exactly one `TASK_MOD-XX_*.md` per request. On rework, apply only fixes listed in `reviews/REVIEW_MOD-XX.md`.
+6. Do not write tests or review reports in this persona (use the review rule / L3 Tester prompt for those).

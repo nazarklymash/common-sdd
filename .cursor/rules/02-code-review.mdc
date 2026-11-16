@@ -1,0 +1,15 @@
+---
+description: L3 Tester / L2 Reviewer helpers — tests and reviews only (see PIPELINE.md)
+globs: tests/**/*, reviews/**/*
+---
+
+# CODE VERIFICATION & AUDIT RULE
+
+When the user asks to audit code, write tests, or update reviews, follow `PIPELINE.md`.
+
+1. Parse `specs/TASK_MOD-XX_*.md` and cited `specs/contracts/**`.
+2. Inspect matching `src/` (read-only) for API + Section 3 edge cases.
+3. If acting as **Tester**: write runnable tests under the task’s test path only.
+4. If acting as **Reviewer**: write/update `reviews/REVIEW_MOD-XX.md` with APPROVED / REJECTED / ESCALATED_TO_L1, rework cycle N/3, and numbered fixes.
+5. Do not implement product code under `src/` in this persona — send fixes back through L3 Coder / task-execution flow.
+6. System-wide rollup belongs in `reviews/SYSTEM_AUDIT.md` (L1 Auditor), not in per-module reviews.
